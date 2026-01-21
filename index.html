@@ -127,7 +127,7 @@
             <h4>First Round</h4>
             <table>
                 <tr><th>Event</th><th>Date</th><th style="width:150px;">Status</th></tr>
-                <tr><td>Paper Submission Deadline</td><td>January 23, 2026, 23:59</td><td><span id="status-submission1"></span></td></tr>
+                <tr><td>Paper Submission Deadline</td><td>January 30, 2026, 23:59 (<s>January 23, 2026, 23:59</s>)</td><td><span id="status-submission1"></span></td></tr>
                 <tr><td>Notification of Acceptance</td><td>February 20, 2026</td><td><span id="status-notification1"></span></td></tr>
                 <tr><td>Camera-ready Due</td><td>March 6, 2026</td><td><span id="status-camera1"></span></td></tr>
             </table>
@@ -167,7 +167,7 @@
 <script>
     // AoE (UTC-12)
     const deadlines = {
-        submission1: new Date('2026-01-24T11:59:00Z'),  // January 23 23:59 AoE = January 24 11:59 UTC
+        submission1: new Date('2026-01-31T11:59:00Z'),  // January 30 23:59 AoE = January 24 11:59 UTC
         notification1: new Date('2026-02-20T12:00:00Z'),
         camera1: new Date('2026-03-06T12:00:00Z'),
         submission2: new Date('2026-03-07T11:59:00Z'),  // March 6 23:59 AoE = March 7 11:59 UTC
@@ -187,7 +187,7 @@
         if (diff > 0) {
             nextDeadline = deadlines.submission1;
             deadlineLabel = "1st Round Paper Submission Deadline:";
-            deadlineDateStr = "January 23, 2026, 23:59 AoE";
+            deadlineDateStr = "January 30, 2026, 23:59 AoE";
         } else {
             // Check 2nd round submission
             diff = deadlines.submission2 - now;
