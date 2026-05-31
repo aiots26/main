@@ -57,6 +57,40 @@
             transform:translateY(0);
             box-shadow:0 1px 2px rgba(0,0,0,0.2);
         }
+
+        /* Accepted Papers 區塊樣式 */
+        .paper-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .paper-item {
+            background: #f9f9f9;
+            border-left: 5px solid #0064a5;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        .paper-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #222;
+            margin-bottom: 5px;
+        }
+        .paper-authors {
+            font-style: italic;
+            color: #555;
+        }
+
+        /* 新增的 Program 區塊樣式 */
+        .tbd-box {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeeba;
+            padding: 15px 20px;
+            border-radius: 4px;
+            font-style: italic;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -79,8 +113,8 @@
         <p>ACNS registrations and supporting letters for visas:</p>
         <ul>
             <li>ACNS registrations are open with early-bird rates prior to <strong>May 1st, 2026</strong>, and standard thereafter, and can be made via <a href="https://cvent.me/89VvOP" target="_blank" rel="noopener">https://cvent.me/89VvOP</a>.</li>
-            <li>Each accepted paper/presentation should be registered at the general rate (early-bird or standard). ACNS 2026 (and co-located workshops) has a single flat registration fee for all attendees.</li>
-            <li>Each participant of the workshop is expected to register for the main conference (early-bird or standard).</li>
+            <li>Each participant of the workshop is expected to register for the ACNS conference (early-bird or standard).</li>
+            <li>Each accepted paper/presentation should be registered at the general rate (early-bird or standard).</li>
             <li><strong>Participants requiring a supporting letter for their visa application should tick the check box during the registration process.</strong></li>
         </ul>
     </section>
@@ -121,8 +155,6 @@
         <p>Submissions must be original and must not duplicate work that any authors have published elsewhere or submitted in parallel to any other venue with formally published proceedings.</p>
         <p>Submissions must be anonymous, with no author names, affiliations, acknowledgements, or obvious references. Each submission must begin with a title, short abstract, and a list of keywords. The introduction should summarise the contributions of the paper at a level appropriate for a non-specialist reader.</p>
         <p>All submissions must follow the original LNCS format (<a href="https://www.springer.com/gp/computer-science/lncs/conference-proceedings-guidelines">Springer LNCS guidelines</a>) with a page limit of <strong>18 pages</strong> (incl. references) for the main part (reviewers are not required to read appendices) and <strong>30 pages in total</strong>. LaTeX is strongly encouraged.</p>
-        <p>Authors of accepted papers must guarantee that their paper will be presented at the workshop by a registered author.</p>
-        <!-- <p><strong>Submission site:</strong> EasyChair.</p> -->
         <div class="submission-button-wrapper">
             <a class="submission-button"
                href="https://easychair.org/conferences/?conf=aiots2026"
@@ -130,6 +162,38 @@
                 Submit via EasyChair
             </a>
         </div>
+    </section>
+
+    <section id="accepted-papers">
+        <h3>Accepted Papers</h3>
+        <p>The following papers have been accepted for presentation at AIoTS 2026:</p>
+        <ul class="paper-list">
+            <li class="paper-item">
+                <div class="paper-title">Trust Calibration for LLM-Based Vulnerability Triage in Cyber-Physical Systems</div>
+                <div class="paper-authors">Adiba Mahmud, Yasmeen Rawajfih and Ross Arnold</div>
+            </li>
+            <li class="paper-item">
+                <div class="paper-title">SPAF-Net: A Fusion Framework of Statistical Payload Features based on Self-Attention Mechanism for Malicious Detection in DOH traffic</div>
+                <div class="paper-authors">Mingjie Li, Yifeng Lian, Haixia Zhang and Kezhen Huang</div>
+            </li>
+            <li class="paper-item">
+                <div class="paper-title">Privacy-Preserving and Integrity-Assured Federated Learning for Solar Net-Metering Forecasting</div>
+                <div class="paper-authors">Parventanis Murthy, Wenzhuo Yang and Kwok-Yan Lam</div>
+            </li>
+            <li class="paper-item">
+                <div class="paper-title">Investigating BiLSTM-Based Intrusion Detection for CAN: Cross-Vehicles and Unknown Attacks</div>
+                <div class="paper-authors">Geethika Tiramdas and Sibylle Fröschle</div>
+            </li>
+            <li class="paper-item">
+                <div class="paper-title">R-GAVF: A Recurrent Generative Adversarial Framework for Temporal Vulnerability Assessment in Industrial Control Systems</div>
+                <div class="paper-authors">Muhammad Muzamil Aslam, Ali Tufail, Liyanage Chandratilak De Silva, Rosyzie Anna Awg Haji Mohd Apong, Muhammad Faisal Buland Iqbal and Muhammad Nauman Irshad</div>
+            </li>
+        </ul>
+    </section>
+
+    <section id="program">
+        <h3>Workshop Program</h3>
+        <p>The detailed workshop schedule and program details will be announced soon.</p>
     </section>
 
     <section>
@@ -176,7 +240,7 @@
             Qian Chen, <i>Xidian University</i><br>
             Sakshi Udeshi, <i>Nanyang Technological University</i><br>
             Shuaiting Huang, <i>University of Cyprus</i><br>
-            Sibylle Fröschle, <i>Hamburg University of Technology</i><br>
+            Subylle Fröschle, <i>Hamburg University of Technology</i><br>
             Sriharsha Etigowni, <i>National Renewable Energy Laboratory</i><br>
             Wenzhuo Yang, <i>Nanyang Technological University</i><br>
             Zhenyong Zhang, <i>Guizhou University</i><br>
@@ -192,10 +256,10 @@
 <script>
     // AoE (UTC-12)
     const deadlines = {
-        submission1: new Date('2026-01-31T11:59:00Z'),  // January 30 23:59 AoE = January 24 11:59 UTC
+        submission1: new Date('2026-01-31T11:59:00Z'),  // January 30 23:59 AoE
         notification1: new Date('2026-02-20T12:00:00Z'),
         camera1: new Date('2026-03-06T12:00:00Z'),
-        submission2: new Date('2026-03-14T11:59:00Z'),  // March 13 23:59 AoE = March 14 11:59 UTC
+        submission2: new Date('2026-03-14T11:59:00Z'),  // March 13 23:59 AoE
         notification2: new Date('2026-04-03T12:00:00Z'),
         camera2: new Date('2026-04-17T12:00:00Z'),
         workshop: new Date('2026-06-22T00:00:00Z')
@@ -268,7 +332,7 @@
     }
 
     updateCountdown();
-    setInterval(updateCountdown, 1000);
+    setInterval(updateCountdown, 100);
 </script>
 
 </body>
