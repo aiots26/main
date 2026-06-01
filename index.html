@@ -81,15 +81,29 @@
             color: #555;
         }
 
-        /* 新增的 Program 區塊樣式 */
-        .tbd-box {
-            background: #fff3cd;
-            color: #856404;
-            border: 1px solid #ffeeba;
-            padding: 15px 20px;
+        /* Program 區塊優化樣式 */
+        .program-table tbody tr:nth-child(even) {
+            background: #fdfdfd;
+        }
+        .program-table tbody tr:hover {
+            background: #f5f9fc;
+        }
+        .time-col {
+            width: 110px;
+            font-weight: 500;
+            color: #0064a5;
+            white-space: nowrap;
+        }
+        .session-info-box {
+            background: #f5f5f5;
+            padding: 12px 15px;
             border-radius: 4px;
-            font-style: italic;
-            display: inline-block;
+            margin-bottom: 15px;
+            font-size: 0.95em;
+        }
+        .session-info-box ul {
+            margin: 5px 0 0 0;
+            padding-left: 20px;
         }
     </style>
 </head>
@@ -99,7 +113,7 @@
 
     <header>
         <h1>8th International Workshop on Artificial Intelligence and Industrial IoT Security (AIoTS 2026)</h1>
-        <h2>June 22, 2026 — Held in conjunction with<br>
+        <h2>June 23, 2026 — Held in conjunction with<br>
             <a href="https://acns2026.github.io/" style="color:white;text-decoration:underline;">ACNS 2026</a><br>
             24th International Conference on Applied Cryptography and Network Security
         </h2>
@@ -159,7 +173,7 @@
             <a class="submission-button"
                href="https://easychair.org/conferences/?conf=aiots2026"
                target="_blank" rel="noopener">
-                Submit via EasyChair
+                 Submit via EasyChair
             </a>
         </div>
     </section>
@@ -193,7 +207,56 @@
 
     <section id="program">
         <h3>Workshop Program</h3>
-        <p>The detailed workshop schedule and program details will be announced soon.</p>
+        <div class="session-info-box">
+            <strong>Date:</strong> June 23, 2026 | <strong>Time:</strong> 11:10–12:35 | <strong>Talk format:</strong> 15 min each, including 3 min Q&A
+        </div>
+        
+        <table class="program-table">
+            <thead>
+                <tr>
+                    <th> Time </th>
+                    <th>Session / Paper Title</th>
+                    <th>Speakers / Authors</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="time-col">11:10–11:15</td>
+                    <td>Opening Remarks and Workshop Introduction</td>
+                    <td class="paper-authors">Sudipta Chattopadhyay and Zeyu Yang</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:15–11:30</td>
+                    <td>Trust Calibration for LLM-Based Vulnerability Triage in Cyber-Physical Systems</td>
+                    <td class="paper-authors">Adiba Mahmud, Yasmeen Rawajfih and Ross Arnold</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:30–11:45</td>
+                    <td>Privacy-Preserving and Integrity-Assured Federated Learning for Solar Net-Metering Forecasting</td>
+                    <td class="paper-authors">Parventanis Murthy, Wenzhuo Yang and Kwok-Yan Lam</td>
+                </tr>
+                <tr>
+                    <td class="time-col">11:45–12:00</td>
+                    <td>Investigating BiLSTM-Based Intrusion Detection for CAN: Cross-Vehicles and Unknown Attacks</td>
+                    <td class="paper-authors">Geethika Tiramdas and Sibylle Fröschle</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:00–12:15</td>
+                    <td>SPAF-Net: A Fusion Framework of Statistical Payload Features based on Self-Attention Mechanism for Malicious Detection in DOH traffic</td>
+                    <td class="paper-authors">Mingjie Li, Yifeng Lian, Haixia Zhang and Kezhen Huang</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:15–12:30</td>
+                    <td>R-GAVF: A Recurrent Generative Adversarial Framework for Temporal Vulnerability Assessment in Industrial Control Systems</td>
+                    <td class="paper-authors">Muhammad Muzamil Aslam, Ali Tufail, Liyanage Chandratilak De Silva, Rosyzie Anna Awg Haji Mohd Apong, Muhammad Faisal Buland Iqbal and Muhammad Nauman Irshad</td>
+                </tr>
+                <tr>
+                    <td class="time-col">12:30–12:35</td>
+                    <td>Closing Remarks</td>
+                    <td class="paper-authors">Jianying Zhou</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
     <section>
@@ -216,7 +279,7 @@
             <h4>Workshop</h4>
             <table>
                 <tr><th>Event</th><th>Date</th><th style="width:150px;">Status</th></tr>
-                <tr><td>Workshop Date</td><td>June 22, 2026</td><td><span id="status-workshop"></span></td></tr>
+                <tr><td>Workshop Date</td><td>June 23, 2026</td><td><span id="status-workshop"></span></td></tr>
             </table>
         </div>
     </section>
@@ -262,7 +325,7 @@
         submission2: new Date('2026-03-14T11:59:00Z'),  // March 13 23:59 AoE
         notification2: new Date('2026-04-03T12:00:00Z'),
         camera2: new Date('2026-04-17T12:00:00Z'),
-        workshop: new Date('2026-06-22T00:00:00Z')
+        workshop: new Date('2026-06-23T00:00:00Z')      // 已修正為對應 6 月 23 日
     };
 
     function updateCountdown() {
